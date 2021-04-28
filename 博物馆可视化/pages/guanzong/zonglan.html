@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Starter</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="../../dist/css/skins/skin-blue.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>KSH</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>可视化系统</b></span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+
+
+
+
+         <!-- <li class="dropdown messages-menu">
+              <a href="#" class="hidden-xs">注册</a>
+          </li>
+
+          <li class="dropdown user user-menu">
+             <a href="#" class="hidden-xs">登录</a>
+          </li>-->
+
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">博物馆可视化</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">个人资料</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">退出登录</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">HEADER</li>
+        <!-- Optionally, you can add icons to the links -->
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>首页</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>观众</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="zonglan.html">总览</a></li>
+            <li><a href="zhuceqingkuang.html">注册情况</a></li>
+            <li><a href="yuyueqingkuang.html">预约情况</a></li>
+            <li><a href="jiangjiefuwu.html">讲解服务</a></li>
+
+          </ul>
+        </li>
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>安防</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../anfang/zonglan.html">总览</a></li>
+            <li><a href="../anfang/anfangrenyuan.html">安防人员</a></li>
+            <li><a href="../anfang/kongtiao.html">空调</a></li>
+          </ul>
+        </li>
+
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>藏品</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">总览</a></li>
+            <li><a href="#">文物提借</a></li>
+            <li><a href="#">文物征集</a></li>
+            <li><a href="#">文物修复</a></li>
+            <li><a href="#">储藏设备</a></li>
+          </ul>
+        </li>
+
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>展览</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">总览</a></li>
+            <li><a href="#">基本陈列</a></li>
+            <li><a href="#">主题展览</a></li>
+            <li><a href="#">专题展览</a></li>
+            <li><a href="#">临时展览</a></li>
+            <li><a href="#">国博巡展</a></li>
+          </ul>
+        </li>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+       观众总览
+      </h1>
+      <ol class="breadcrumb">               <!--<ol> 标签定义有序列表-->
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">观众</a></li>
+        <li class="active">总览</li>
+      </ol>
+    </section>
+
+
+    <section class="content">
+      <div class="row">
+
+        <div class="col-md-6">
+          <!-- AREA CHART -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">近五年观众注册量</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div  id="main" class="chart">
+                <canvas id="areaChart" width="800px" height="500px" ></canvas>
+                <!--canvas它是一个HTML标签,是一个画布，是一个容器，可以使用JavaScript对它进行操作。-->
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">近五年观众预约量</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <canvas id="pieChart" width="700px" height="500px"></canvas>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+
+
+        <div class="col-md-6">
+          <!-- LINE CHART -->
+          <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">近五年入馆观众人数</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="lineChart" width="800px" height="500px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+
+          <div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">全年观众接待量月排行及接待人数</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body">
+              <div class="chart">
+                <canvas id="baChart" width="800px" height="500px"></canvas>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+        <!-- /.col (RIGHT) -->
+      </div>
+    </section>
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+<!-- jQuery 3 -->
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../../bower_components/chart.js/Chart.js"></script>
+  <!-- FastClick -->
+  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+
+ <script type="text/javascript">
+ function goBarChart(dataArr){
+            // 声明所需变量
+            var canvas,ctx;
+            // 图表属性
+            var cWidth, cHeight, cMargin, cSpace;
+            var originX, originY;
+            // 柱状图属性
+            var bMargin, tobalBars, bWidth, maxValue;
+            var totalYNomber;
+            var gradient;
+
+            // 运动相关变量
+            var ctr, numctr, speed;
+            //鼠标移动
+            var mousePosition = {};
+
+            // 获得canvas上下文
+            canvas = document.getElementById("areaChart");
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+            }
+            initChart(); // 图表初始化
+            drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+            drawBarAnimate(); // 绘制柱状图的动画
+            //检测鼠标移动
+            var mouseTimer = null;
+            canvas.addEventListener("mousemove",function(e){
+                e = e || window.event;
+                if( e.layerX || e.layerX==0 ){
+                    mousePosition.x = e.layerX;
+                    mousePosition.y = e.layerY;
+                }else if( e.offsetX || e.offsetX==0 ){
+                    mousePosition.x = e.offsetX;
+                    mousePosition.y = e.offsetY;
+                }
+
+                clearTimeout(mouseTimer);
+                mouseTimer = setTimeout(function(){
+                    ctx.clearRect(0,0,canvas.width, canvas.height);
+                    drawLineLabelMarkers();
+                    drawBarAnimate(true);
+                },10);
+            });
+
+            //点击刷新图表
+            canvas.onclick = function(){
+                initChart(); // 图表初始化
+                drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+                drawBarAnimate(); // 绘制折线图的动画
+            };
+
+
+            // 图表初始化
+            function initChart(){
+                // 图表信息
+                cMargin = 30;
+                cSpace = 60;
+                cHeight = canvas.height - cMargin*2 - cSpace;
+                cWidth = canvas.width - cMargin*2 - cSpace;
+                originX = cMargin + cSpace;
+                originY = cMargin + cHeight;
+
+                // 柱状图信息
+                bMargin = 15;
+                tobalBars = dataArr.length;
+                bWidth = parseInt( cWidth/tobalBars - bMargin );
+                maxValue = 0;
+                for(var i=0; i<dataArr.length; i++){
+                    var barVal = parseInt( dataArr[i][1] );
+                    if( barVal > maxValue ){
+                        maxValue = barVal;
+                    }
+                }
+                maxValue += 50;
+                totalYNomber = 10;
+                // 运动相关
+                ctr = 1;
+                numctr = 100;
+                speed = 10;
+
+                //柱状图渐变色
+                gradient = ctx.createLinearGradient(0, 0, 0, 300);
+               // gradient.addColorStop(0, 'blue');
+                gradient.addColorStop(1, 'rgba(51,153,204,1)');
+
+            }
+
+            // 绘制图表轴、标签和标记
+            function drawLineLabelMarkers(){
+                ctx.translate(0.5,0.5);  // 当只绘制1像素的线的时候，坐标点需要偏移，这样才能画出1像素实线
+                ctx.font = "12px Arial";
+                ctx.lineWidth = 1;
+                ctx.fillStyle = "#000";
+                ctx.strokeStyle = "#000";
+                // y轴
+                drawLine(originX, originY, originX, cMargin);
+                // x轴
+                drawLine(originX, originY, originX+cWidth, originY);
+
+                // 绘制标记
+                drawMarkers();
+                ctx.translate(-0.5,-0.5);  // 还原位置
+            }
+
+            // 画线的方法
+            function drawLine(x, y, X, Y){
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(X, Y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // 绘制标记
+            function drawMarkers(){
+                ctx.strokeStyle = "#E0E0E0";
+                // 绘制 y
+                var oneVal = parseInt(maxValue/totalYNomber);
+                ctx.textAlign = "right";
+                for(var i=0; i<=totalYNomber; i++){
+                    var markerVal =  i*oneVal;
+                    var xMarker = originX-5;
+                    var yMarker = parseInt( cHeight*(1-markerVal/maxValue) ) + cMargin;
+                    //console.log(xMarker, yMarker+3,markerVal/maxValue,originY);
+                    ctx.fillText(markerVal, xMarker, yMarker+3, cSpace); // 文字
+                    if(i>0){
+                        drawLine(originX, yMarker, originX+cWidth, yMarker);
+                    }
+                }
+                // 绘制 x
+                ctx.textAlign = "center";
+                for(var i=0; i<tobalBars; i++){
+                    var markerVal = dataArr[i][0];
+                    var xMarker = parseInt( originX+cWidth*(i/tobalBars)+bMargin+bWidth/2 );
+                    var yMarker = originY+15;
+                    ctx.fillText(markerVal, xMarker, yMarker, cSpace); // 文字
+                }
+                // 绘制标题 y
+                ctx.save();
+                ctx.rotate(-Math.PI/2);
+                ctx.fillText("人数:千", -canvas.height/2, cSpace-10);
+                ctx.restore();
+                // 绘制标题 x
+                ctx.fillText("年份", originX+cWidth/2, originY+cSpace/2+10);
+            };
+
+            //绘制柱形图
+            function drawBarAnimate(mouseMove){
+                for(var i=0; i<tobalBars; i++){
+                    var oneVal = parseInt(maxValue/totalYNomber);
+                    var barVal = dataArr[i][1];
+                    var barH = parseInt( cHeight*barVal/maxValue * ctr/numctr );
+                    var y = originY - barH;
+                    var x = originX + (bWidth+bMargin)*i + bMargin;
+                    drawRect( x, y, bWidth, barH, mouseMove );  //高度减一避免盖住x轴
+                    ctx.fillText(parseInt(barVal*ctr/numctr), x+15, y-8); // 文字
+                }
+                if(ctr<numctr){
+                    ctr++;
+                    setTimeout(function(){
+                        ctx.clearRect(0,0,canvas.width, canvas.height);
+                        drawLineLabelMarkers();
+                        drawBarAnimate();
+                    }, speed);
+                }
+            }
+
+            //绘制方块
+            function drawRect( x, y, X, Y, mouseMove ){
+
+                ctx.beginPath();
+                ctx.rect( x, y, X, Y );
+                if(mouseMove && ctx.isPointInPath(mousePosition.x, mousePosition.y)){ //如果是鼠标移动的到柱状图上，重新绘制图表
+                   // ctx.fillStyle = "grey";
+                }else{
+                    ctx.fillStyle = gradient;
+                    ctx.strokeStyle = gradient;
+                }
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        goBarChart(
+                [[2016, 800], [2017, 250], [2018, 350], [2019, 540], [2020, 185.2]]
+        )
+</script>
+
+
+
+
+<script type="text/javascript">
+ function goBarChart(dataArr){
+            // 声明所需变量
+            var canvas,ctx;
+            // 图表属性
+            var cWidth, cHeight, cMargin, cSpace;
+            var originX, originY;
+            // 柱状图属性
+            var bMargin, tobalBars, bWidth, maxValue;
+            var totalYNomber;
+            var gradient;
+
+            // 运动相关变量
+            var ctr, numctr, speed;
+            //鼠标移动
+            var mousePosition = {};
+
+            // 获得canvas上下文
+            canvas = document.getElementById("pieChart");
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+            }
+            initChart(); // 图表初始化
+            drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+            drawBarAnimate(); // 绘制柱状图的动画
+            //检测鼠标移动
+            var mouseTimer = null;
+            canvas.addEventListener("mousemove",function(e){
+                e = e || window.event;
+                if( e.layerX || e.layerX==0 ){
+                    mousePosition.x = e.layerX;
+                    mousePosition.y = e.layerY;
+                }else if( e.offsetX || e.offsetX==0 ){
+                    mousePosition.x = e.offsetX;
+                    mousePosition.y = e.offsetY;
+                }
+
+                clearTimeout(mouseTimer);
+                mouseTimer = setTimeout(function(){
+                    ctx.clearRect(0,0,canvas.width, canvas.height);
+                    drawLineLabelMarkers();
+                    drawBarAnimate(true);
+                },10);
+            });
+
+            //点击刷新图表
+            canvas.onclick = function(){
+                initChart(); // 图表初始化
+                drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+                drawBarAnimate(); // 绘制折线图的动画
+            };
+
+
+            // 图表初始化
+            function initChart(){
+                // 图表信息
+                cMargin = 30;
+                cSpace = 60;
+                cHeight = canvas.height - cMargin*2 - cSpace;
+                cWidth = canvas.width - cMargin*2 - cSpace;
+                originX = cMargin + cSpace;
+                originY = cMargin + cHeight;
+
+                // 柱状图信息
+                bMargin = 15;
+                tobalBars = dataArr.length;
+                bWidth = parseInt( cWidth/tobalBars - bMargin );
+                maxValue = 0;
+                for(var i=0; i<dataArr.length; i++){
+                    var barVal = parseInt( dataArr[i][1] );
+                    if( barVal > maxValue ){
+                        maxValue = barVal;
+                    }
+                }
+                maxValue += 50;
+                totalYNomber = 10;
+                // 运动相关
+                ctr = 1;
+                numctr = 100;
+                speed = 10;
+
+                //柱状图渐变色
+                gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                //gradient.addColorStop(0, 'green');
+                gradient.addColorStop(1, 'rgba(51,153,204,1)');
+
+            }
+
+            // 绘制图表轴、标签和标记
+            function drawLineLabelMarkers(){
+                ctx.translate(0.5,0.5);  // 当只绘制1像素的线的时候，坐标点需要偏移，这样才能画出1像素实线
+                ctx.font = "12px Arial";
+                ctx.lineWidth = 1;
+                ctx.fillStyle = "#000";
+                ctx.strokeStyle = "#000";
+                // y轴
+                drawLine(originX, originY, originX, cMargin);
+                // x轴
+                drawLine(originX, originY, originX+cWidth, originY);
+
+                // 绘制标记
+                drawMarkers();
+                ctx.translate(-0.5,-0.5);  // 还原位置
+            }
+
+            // 画线的方法
+            function drawLine(x, y, X, Y){
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(X, Y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // 绘制标记
+            function drawMarkers(){
+                ctx.strokeStyle = "#E0E0E0";
+                // 绘制 y
+                var oneVal = parseInt(maxValue/totalYNomber);
+                ctx.textAlign = "right";
+                for(var i=0; i<=totalYNomber; i++){
+                    var markerVal =  i*oneVal;
+                    var xMarker = originX-5;
+                    var yMarker = parseInt( cHeight*(1-markerVal/maxValue) ) + cMargin;
+                    //console.log(xMarker, yMarker+3,markerVal/maxValue,originY);
+                    ctx.fillText(markerVal, xMarker, yMarker+3, cSpace); // 文字
+                    if(i>0){
+                        drawLine(originX, yMarker, originX+cWidth, yMarker);
+                    }
+                }
+                // 绘制 x
+                ctx.textAlign = "center";
+                for(var i=0; i<tobalBars; i++){
+                    var markerVal = dataArr[i][0];
+                    var xMarker = parseInt( originX+cWidth*(i/tobalBars)+bMargin+bWidth/2 );
+                    var yMarker = originY+15;
+                    ctx.fillText(markerVal, xMarker, yMarker, cSpace); // 文字
+                }
+                // 绘制标题 y
+                ctx.save();
+                ctx.rotate(-Math.PI/2);
+                ctx.fillText("人数：千", -canvas.height/2, cSpace-10);
+                ctx.restore();
+                // 绘制标题 x
+                ctx.fillText("年份", originX+cWidth/2, originY+cSpace/2+10);
+            };
+
+            //绘制柱形图
+            function drawBarAnimate(mouseMove){
+                for(var i=0; i<tobalBars; i++){
+                    var oneVal = parseInt(maxValue/totalYNomber);
+                    var barVal = dataArr[i][1];
+                    var barH = parseInt( cHeight*barVal/maxValue * ctr/numctr );
+                    var y = originY - barH;
+                    var x = originX + (bWidth+bMargin)*i + bMargin;
+                    drawRect( x, y, bWidth, barH, mouseMove );  //高度减一避免盖住x轴
+                    ctx.fillText(parseInt(barVal*ctr/numctr), x+15, y-8); // 文字
+                }
+                if(ctr<numctr){
+                    ctr++;
+                    setTimeout(function(){
+                        ctx.clearRect(0,0,canvas.width, canvas.height);
+                        drawLineLabelMarkers();
+                        drawBarAnimate();
+                    }, speed);
+                }
+            }
+
+            //绘制方块
+            function drawRect( x, y, X, Y, mouseMove ){
+
+                ctx.beginPath();
+                ctx.rect( x, y, X, Y );
+                if(mouseMove && ctx.isPointInPath(mousePosition.x, mousePosition.y)){ //如果是鼠标移动的到柱状图上，重新绘制图表
+                   // ctx.fillStyle = "yellow";
+                }else{
+                    ctx.fillStyle = gradient;
+                    ctx.strokeStyle = gradient;
+                }
+                ctx.fill();
+                ctx.closePath();
+
+            }
+
+
+        }
+        goBarChart(
+                [[2016, 540], [2017, 320], [2018, 750], [2019, 358.1], [2020, 158.5]]
+        )
+</script>
+
+
+
+  <script type="text/javascript">
+ function goBarChart(dataArr){
+            // 声明所需变量
+            var canvas,ctx;
+            // 图表属性
+            var cWidth, cHeight, cMargin, cSpace;
+            var originX, originY;
+            // 柱状图属性
+            var bMargin, tobalBars, bWidth, maxValue;
+            var totalYNomber;
+            var gradient;
+
+            // 运动相关变量
+            var ctr, numctr, speed;
+            //鼠标移动
+            var mousePosition = {};
+
+            // 获得canvas上下文
+            canvas = document.getElementById("lineChart");
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+            }
+            initChart(); // 图表初始化
+            drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+            drawBarAnimate(); // 绘制柱状图的动画
+            //检测鼠标移动
+            var mouseTimer = null;
+            canvas.addEventListener("mousemove",function(e){
+                e = e || window.event;
+                if( e.layerX || e.layerX==0 ){
+                    mousePosition.x = e.layerX;
+                    mousePosition.y = e.layerY;
+                }else if( e.offsetX || e.offsetX==0 ){
+                    mousePosition.x = e.offsetX;
+                    mousePosition.y = e.offsetY;
+                }
+
+                clearTimeout(mouseTimer);
+                mouseTimer = setTimeout(function(){
+                    ctx.clearRect(0,0,canvas.width, canvas.height);
+                    drawLineLabelMarkers();
+                    drawBarAnimate(true);
+                },10);
+            });
+
+            //点击刷新图表
+            canvas.onclick = function(){
+                initChart(); // 图表初始化
+                drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+                drawBarAnimate(); // 绘制折线图的动画
+            };
+
+
+            // 图表初始化
+            function initChart(){
+                // 图表信息
+                cMargin = 30;
+                cSpace = 60;
+                cHeight = canvas.height - cMargin*2 - cSpace;
+                cWidth = canvas.width - cMargin*2 - cSpace;
+                originX = cMargin + cSpace;
+                originY = cMargin + cHeight;
+
+                // 柱状图信息
+                bMargin = 15;
+                tobalBars = dataArr.length;
+                bWidth = parseInt( cWidth/tobalBars - bMargin );
+                maxValue = 0;
+                for(var i=0; i<dataArr.length; i++){
+                    var barVal = parseInt( dataArr[i][1] );
+                    if( barVal > maxValue ){
+                        maxValue = barVal;
+                    }
+                }
+                maxValue += 50;
+                totalYNomber = 10;
+                // 运动相关
+                ctr = 1;
+                numctr = 100;
+                speed = 10;
+
+                //柱状图渐变色
+                gradient = ctx.createLinearGradient(0, 0, 0, 300);
+             //   gradient.addColorStop(0, 'green');
+                gradient.addColorStop(1, 'rgba(51,153,204,1)');
+
+            }
+
+            // 绘制图表轴、标签和标记
+            function drawLineLabelMarkers(){
+                ctx.translate(0.5,0.5);  // 当只绘制1像素的线的时候，坐标点需要偏移，这样才能画出1像素实线
+                ctx.font = "12px Arial";
+                ctx.lineWidth = 1;
+                ctx.fillStyle = "#000";
+                ctx.strokeStyle = "#000";
+                // y轴
+                drawLine(originX, originY, originX, cMargin);
+                // x轴
+                drawLine(originX, originY, originX+cWidth, originY);
+
+                // 绘制标记
+                drawMarkers();
+                ctx.translate(-0.5,-0.5);  // 还原位置
+            }
+
+            // 画线的方法
+            function drawLine(x, y, X, Y){
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(X, Y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // 绘制标记
+            function drawMarkers(){
+                ctx.strokeStyle = "#E0E0E0";
+                // 绘制 y
+                var oneVal = parseInt(maxValue/totalYNomber);
+                ctx.textAlign = "right";
+                for(var i=0; i<=totalYNomber; i++){
+                    var markerVal =  i*oneVal;
+                    var xMarker = originX-5;
+                    var yMarker = parseInt( cHeight*(1-markerVal/maxValue) ) + cMargin;
+                    //console.log(xMarker, yMarker+3,markerVal/maxValue,originY);
+                    ctx.fillText(markerVal, xMarker, yMarker+3, cSpace); // 文字
+                    if(i>0){
+                        drawLine(originX, yMarker, originX+cWidth, yMarker);
+                    }
+                }
+                // 绘制 x
+                ctx.textAlign = "center";
+                for(var i=0; i<tobalBars; i++){
+                    var markerVal = dataArr[i][0];
+                    var xMarker = parseInt( originX+cWidth*(i/tobalBars)+bMargin+bWidth/2 );
+                    var yMarker = originY+15;
+                    ctx.fillText(markerVal, xMarker, yMarker, cSpace); // 文字
+                }
+                // 绘制标题 y
+                ctx.save();
+                ctx.rotate(-Math.PI/2);
+                ctx.fillText("人数：千", -canvas.height/2, cSpace-10);
+                ctx.restore();
+                // 绘制标题 x
+                ctx.fillText("年份", originX+cWidth/2, originY+cSpace/2+10);
+            };
+
+            //绘制柱形图
+            function drawBarAnimate(mouseMove){
+                for(var i=0; i<tobalBars; i++){
+                    var oneVal = parseInt(maxValue/totalYNomber);
+                    var barVal = dataArr[i][1];
+                    var barH = parseInt( cHeight*barVal/maxValue * ctr/numctr );
+                    var y = originY - barH;
+                    var x = originX + (bWidth+bMargin)*i + bMargin;
+                    drawRect( x, y, bWidth, barH, mouseMove );  //高度减一避免盖住x轴
+                    ctx.fillText(parseInt(barVal*ctr/numctr), x+15, y-8); // 文字
+                }
+                if(ctr<numctr){
+                    ctr++;
+                    setTimeout(function(){
+                        ctx.clearRect(0,0,canvas.width, canvas.height);
+                        drawLineLabelMarkers();
+                        drawBarAnimate();
+                    }, speed);
+                }
+            }
+
+            //绘制方块
+            function drawRect( x, y, X, Y, mouseMove ){
+
+                ctx.beginPath();
+                ctx.rect( x, y, X, Y );
+                if(mouseMove && ctx.isPointInPath(mousePosition.x, mousePosition.y)){ //如果是鼠标移动的到柱状图上，重新绘制图表
+                //    ctx.fillStyle = "green";
+                }else{
+                    ctx.fillStyle = gradient;
+                    ctx.strokeStyle = gradient;
+                }
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+        goBarChart(
+                [[2016, 520], [2017, 315.205], [2018, 688], [2019, 438.52], [2020, 152]]
+        )
+
+
+
+
+
+
+
+/*
+		   //		获取画布对象和画布工具
+		var maycanvas=document.getElementById("pieChart");
+		var ctx=maycanvas.getContext("2d");
+//		动态获取画布的宽和高
+		var canvasW=ctx.canvas.width;
+		var canvasH=ctx.canvas.height;
+//		定义变量
+		var unm=50;
+//		绘制x,y轴
+		ctx.moveTo(unm,unm);             //cxt.moveTo(x,y) 移动到指定坐标而不绘制子路径 即线条起点
+		ctx.lineTo(unm,canvasH-unm);    //ctx.lineTo(x,y) 绘制一条到指定坐标的子路径 即线条终点
+		ctx.lineTo(canvasW-unm,canvasH-unm)
+		ctx.strokeStyle="#000000";  //ctx.strokeStyle="#000000" 线条颜色
+		ctx.stroke();    //ctx.stroke() 给子路径描述的图形绘制轮廓线 即将起点和终点连成一条线
+
+//		绘制y轴突出部位和下标
+		for(i=0;i<5;i++){
+		ctx.moveTo(unm,canvasH-unm-i*100);
+		ctx.lineTo(unm-10,canvasH-unm-i*100)
+		ctx.strokeStyle="#000000";
+		ctx.stroke();
+		ctx.fillText(i*100,unm-30,canvasH-unm-i*100)   //ctx.fillText(value,x,y)填充文字，value为文字值，x y为值的坐标。
+		}
+//		绘制x轴和下标
+		for(i=1;i<7;i++){
+		ctx.moveTo(unm+40+80*i,canvasH-unm);
+		ctx.lineTo(unm+40+80*i,canvasH-unm+10);
+		ctx.strokeStyle="#000000";
+		ctx.stroke();
+		}
+//		绘制柱形
+		ctx.beginPath();
+		ctx.moveTo(unm+40,canvasH-unm);
+		ctx.lineTo(unm+40,canvasH-unm+10);
+		ctx.strokeStyle="#000000";
+		ctx.stroke();
+		var arr=[200,330,390,320,230];
+		for(i=0;i<8;i++){
+		ctx.fillStyle="rgb(191,186,28)";   //ctx.fillStyle='#000000' 设置文字填充颜色
+		ctx.rect(unm+20+80*i, canvasH-unm-arr[i],40,arr[i]);
+		ctx.fill();
+		}
+		//添加下面的字
+		var zi=["2016","2017","2018","2019","2020"]
+		ctx.beginPath();
+		for(i=0;i<zi.length;i++){
+		ctx.fillText(zi[i],80+i*80,canvasH-30)
+		   }
+*/
+
+
+
+   /* var ocanvas = document.getElementById("barChart");
+    var mycanvas = ocanvas.getContext("2d");
+    var arr = [60,90,150,130,170,190,125,175,155,165,155,145];
+
+    //第一先定义一个画线的函数方法    画两条线
+    function line(aX,aY,bX,bY) {//开始和结束的横坐标  开始和结束的纵坐标
+        mycanvas.beginPath();
+        mycanvas.moveTo(aX,aY);
+        mycanvas.lineTo(bX,bY);
+        mycanvas.stroke();
+    }
+    line(300,80,300,480);
+    line(900,80,900,480);
+
+    //第二用for循环 画11条线   利用上面line的画线方法
+    for(var i=0;i<11;i++){
+       //300,80,900,80
+        //300,120,900,120
+       line(300,80+i*40,900,80+i*40);
+        write(200-i*20,280,80+i*40)
+
+    }
+    //第三定义一个矩形的函数方法
+    function rect(X,Y,width,height) {
+        mycanvas.beginPath();
+        mycanvas.fillStyle="#abcdef";
+        mycanvas.rect(X,Y,width,height);
+        mycanvas.fill();
+        mycanvas.closePath()
+    }
+
+    //第四定义一个方法  定义矩形的具体变量以及高引入数组
+    function wenrect() {
+        for(var i=0;i<12;i++){
+            var width=30;
+            var height=arr[i]*2;
+            var X=310+i*40+i*10;
+            var Y=480-height;
+            rect(X,Y,width,height);
+            write((i+1)+"月",320+i*40+i*10,500)
+        }
+    }
+    wenrect();
+
+    //添加字
+    function write(start,ox,oy) {
+        mycanvas.beginPath();
+        mycanvas.fillStyle = "black";
+        mycanvas.fillText(start,ox,oy);
+        mycanvas.closePath();
+    }*/
+
+
+
+
+
+
+        function goChart(dataArr){
+            // 声明所需变量
+            var canvas,ctx;
+            // 图表属性
+            var cWidth, cHeight, cMargin, cSpace;
+            var originX, originY;
+            // 折线图属性
+            var tobalDots, dotSpace, maxValue;
+            var totalYNomber;
+            // 运动相关变量
+            var ctr, numctr, speed;
+
+            // 获得canvas上下文
+            canvas = document.getElementById("baChart");
+            if(canvas && canvas.getContext){
+                ctx = canvas.getContext("2d");
+            }
+            initChart(); // 图表初始化
+            drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+            drawLineAnimate(); // 绘制折线图的动画
+
+            //点击刷新图表
+            canvas.onclick = function(){
+                initChart(); // 图表初始化
+                drawLineLabelMarkers(); // 绘制图表轴、标签和标记
+                drawLineAnimate(); // 绘制折线图的动画
+            };
+
+            // 图表初始化
+            function initChart(){
+                // 图表信息
+                cMargin = 60;
+                cSpace = 80;
+                /*这里是对高清屏幕的处理，
+                     方法：先将canvas的width 和height设置成本来的两倍
+                     然后将style.height 和 style.width设置成本来的宽高
+                     这样相当于把两倍的东西缩放到原来的 1/2，这样在高清屏幕上 一个像素的位置就可以有两个像素的值
+                     这样需要注意的是所有的宽高间距，文字大小等都得设置成原来的两倍才可以。
+                */
+                canvas.width = Math.floor( (window.innerWidth-100)/2 ) * 2 ;
+                canvas.height = 740;
+                canvas.style.height = canvas.height/2 + "px";
+                canvas.style.width = canvas.width/2 + "px";
+                cHeight = canvas.height - cMargin - cSpace;
+                cWidth = canvas.width - cMargin - cSpace;
+                originX = cMargin + cSpace;
+                originY = cMargin + cHeight;
+
+                // 折线图信息
+                tobalDots = dataArr.length;
+                dotSpace = parseInt( cWidth/tobalDots );
+                maxValue = 0;
+                for(var i=0; i<dataArr.length; i++){
+                    var dotVal = parseInt( dataArr[i][1] );
+                    if( dotVal > maxValue ){
+                        maxValue = dotVal;
+                    }
+                }
+                maxValue += 50;
+                totalYNomber = 10;
+                // 运动相关
+                ctr = 1;
+                numctr = 100;
+                speed = 6;
+
+                ctx.translate(0.5,0.5);  // 当只绘制1像素的线的时候，坐标点需要偏移，这样才能画出1像素实线
+            }
+
+            // 绘制图表轴、标签和标记
+            function drawLineLabelMarkers(){
+                ctx.font = "24px Arial";
+                ctx.lineWidth = 2;
+                ctx.fillStyle = "#566a80";
+                ctx.strokeStyle = "#566a80";
+                // y轴
+                drawLine(originX, originY, originX, cMargin);
+                // x轴
+                drawLine(originX, originY, originX+cWidth, originY);
+
+                // 绘制标记
+                drawMarkers();
+            }
+
+            // 画线的方法
+            function drawLine(x, y, X, Y){
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+                ctx.lineTo(X, Y);
+                ctx.stroke();
+                ctx.closePath();
+            }
+
+            // 绘制标记
+            function drawMarkers(){
+                ctx.strokeStyle = "#E0E0E0";
+                // 绘制 y 轴 及中间横线
+                var oneVal = parseInt(maxValue/totalYNomber);
+                ctx.textAlign = "right";
+                for(var i=0; i<=totalYNomber; i++){
+                    var markerVal =  i*oneVal;
+                    var xMarker = originX-5;
+                    var yMarker = parseInt( cHeight*(1-markerVal/maxValue) ) + cMargin;
+
+                    ctx.fillText(markerVal, xMarker, yMarker+3, cSpace); // 文字
+                    if(i>0){
+                        drawLine(originX+2, yMarker, originX+cWidth, yMarker);
+                    }
+                }
+                // 绘制 x 轴 及中间竖线
+                ctx.textAlign = "center";
+                for(var i=0; i<tobalDots; i++){
+                    var markerVal = dataArr[i][0];
+                    var xMarker = originX+i*dotSpace;
+                    var yMarker = originY+30;
+                    ctx.fillText(markerVal, xMarker, yMarker, cSpace); // 文字
+                    if(i>0){
+                        drawLine(xMarker, originY-2, xMarker, cMargin    );
+                    }
+                }
+                // 绘制标题 y
+                ctx.save();
+                ctx.rotate(-Math.PI/2);
+                ctx.fillText("每月接待人数：千", -canvas.height/2, cSpace-10);
+                ctx.restore();
+                // 绘制标题 x
+                ctx.fillText("月份", originX+cWidth/2, originY+cSpace/2+20);
+            };
+
+            //绘制折线图
+            function drawLineAnimate(){
+                ctx.strokeStyle = "#566a80";  //"#49FE79";
+
+                //连线
+                ctx.beginPath();
+                for(var i=0; i<tobalDots; i++){
+                    var dotVal = dataArr[i][1];
+                    var barH = parseInt( cHeight*dotVal/maxValue* ctr/numctr );//
+                    var y = originY - barH;
+                    var x = originX + dotSpace*i;
+                    if(i==0){
+                        ctx.moveTo( x, y );
+                    }else{
+                        ctx.lineTo( x, y );
+                    }
+                }
+                ctx.stroke();
+
+                //背景
+                ctx.lineTo( originX+dotSpace*(tobalDots-1), originY);
+                ctx.lineTo( originX, originY);
+                //背景渐变色
+                //柱状图渐变色
+                var gradient = ctx.createLinearGradient(0, 0, 0, 300);
+                //gradient.addColorStop(0, 'rgba(51,153,204,0.6)');
+                gradient.addColorStop(1, 'rgba(51,153,204,0.6)');
+                ctx.fillStyle = gradient;
+                ctx.fill();
+                ctx.closePath();
+                ctx.fillStyle = "#566a80";
+
+                //绘制点
+                for(var i=0; i<tobalDots; i++){
+                    var dotVal = dataArr[i][1];
+                    var barH = parseInt( cHeight*dotVal/maxValue * ctr/numctr );
+                    var y = originY - barH;
+                    var x = originX + dotSpace*i;
+                    drawArc( x, y );  //绘制点
+                    ctx.fillText(parseInt(dotVal*ctr/numctr), x+15, y-8); // 文字
+                }
+
+                if(ctr<numctr){
+                    ctr++;
+                    setTimeout(function(){
+                        ctx.clearRect(0,0,canvas.width, canvas.height);
+                        drawLineLabelMarkers();
+                        drawLineAnimate();
+                    }, speed);
+                }
+            }
+
+            //绘制圆点
+            function drawArc( x, y, X, Y ){
+                ctx.beginPath();
+                ctx.arc( x, y, 3, 0, Math.PI*2 );
+                ctx.fill();
+                ctx.closePath();
+            }
+
+
+        }
+
+        var chartData = [["2020/01", 120], ["2020/02", 60], ["2020/03", 100], ["2020/04",200], ["2020/05",350], ["2020/06",600],["2020/07", 120], ["2020/08", 60], ["2020/09", 100], ["2020/10",200], ["2020/11",350], ["2020/12",600]];
+        goChart(chartData);
+
+</script>
+
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>

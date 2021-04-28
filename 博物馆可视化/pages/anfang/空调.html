@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div id="main" style="width: 800px;height:600px;"></div>
+<script type="text/javascript">
+
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+option = {
+title: {
+        text: '制冷站温度',           //大标题
+        left: 'center'      //组件离容器左侧的距离,'left', 'center',
+
+    },
+    series: [{
+            type: 'gauge',
+            center: ["50%", "60%"],
+            startAngle: 200,
+            endAngle: -20,
+            min: 0,
+            max: 30,
+            splitNumber: 6,
+            itemStyle: {
+                color: '#FFAB91'
+            },
+            progress: {
+                show: true,
+                width: 30
+            },
+
+            pointer: {
+                show: false,
+            },
+            axisLine: {
+                lineStyle: {
+                    width: 30
+                }
+            },
+            axisTick: {            // 刻度(线)样式。
+                distance: -45,
+                splitNumber: 5,  //一个大格中小分割线的数量
+                lineStyle: {     // 温度盘轴线样式。
+                    width: 2,  //小分割线的宽度
+                    color: '#999'
+                }
+            },
+            splitLine: {    //大分割线
+                distance: -52,
+                length: 14,
+                lineStyle: {
+                    width: 3,
+                    color: '#999'
+                }
+            },
+            axisLabel: {    // 刻度标签。
+                distance: -45,  //刻度标签显示的位置
+                color: '#999',
+                fontSize: 20
+            },
+            anchor: {
+                show: false
+            },
+            title: {
+                show: false
+            },
+            detail: {
+                valueAnimation: true,
+                width: '60%',
+                lineHeight: 40,
+                height: '15%',
+                borderRadius: 8,
+                offsetCenter: [0, '-15%'],
+                fontSize: 80,
+                fontWeight: 'bolder',
+                formatter: '{value} °C',
+                color: '#FFA07A'
+            },
+            data: [{
+                value: 25
+            }]
+        },
+
+        {
+            type: 'gauge',
+            center: ["50%", "60%"],
+            startAngle: 200,
+            endAngle: -20,
+            min: 0,
+            max: 60,
+            itemStyle: {
+                color: '#FD7347',
+            },
+            progress: {
+                show: true,
+                width: 8
+            },
+
+            pointer: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            axisTick: {
+                show: false
+            },
+            splitLine: {
+                show: false
+            },
+            axisLabel: {
+                show: false
+            },
+            detail: {
+                show: false
+            },
+            data: [{
+                value: 25,
+            }]
+
+        }
+    ],
+};
+
+setInterval(function() {
+    let temperature = value;
+    option.series[0].data[0].value = temperature ;
+    myChart.setOption(option, true);
+}, 2000);
+myChart.setOption(option);
+</script>
+</body>
+</html>

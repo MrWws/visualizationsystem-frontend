@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 200px;height:200px;"></div>
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    title: {
+        text: '观众性别统计',           //大标题
+        left: 'center'       //组件离容器左侧的距离,'left', 'center',
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        top: '10%',
+        left: 'center'
+    },
+    series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['30%', '60%'],
+            avoidLabelOverlap: false,
+            label: {
+                show: false,
+                position: 'center'
+            },
+            emphasis: {
+                label: {
+                    show: true,
+                    fontSize: '40',
+                    fontWeight: 'bold'
+                }
+            },
+            labelLine: {
+                show: false
+            },
+            data: [
+                {value: 1048, name: '男'},
+                {value: 735, name: '女'}
+            ]
+        }
+    ]
+};
+myChart.setOption(option);
+</script>
+</body>
+</html>

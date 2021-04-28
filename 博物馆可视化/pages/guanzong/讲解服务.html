@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="../../dist/js/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 800px;height:600px;"></div>
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
+    },
+    legend: {
+        data: ['利润', '支出', '收入','总利润']
+    },
+    grid: {
+        left: '4%',  //图标离左边的距离
+        right: '4%',   //图标离右边的距离
+        bottom: '4',   //图标离下部的距离
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    yAxis: [
+        {
+            type: 'category',      //类目轴
+            axisTick: {
+                show: false
+            },
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }
+    ],
+    series: [
+        {
+            name: '利润',
+            type: 'bar',
+            stack: '1',   //stack数据堆叠，为防止堆叠，stack要给不同的值或者把stack去掉。
+            label: {
+                show: true,
+                position: 'inside'  //数字显示的位置
+            },
+            emphasis: {
+                focus: 'series'   //只显示当前图例，隐藏其他图例
+            },
+            data: [200, 170, 240, 244, 200, 220, 210]
+        },
+
+        {
+            name: '收入',
+            type: 'bar',
+            stack: '2',
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [320, 302, 341, 374, 390, 450, 420]
+        },
+
+        {
+            name: '支出',
+            type: 'bar',
+            stack: '1',
+            label: {
+                show: true,
+
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [-120, -132, -101, -134, -190, -230, -210]
+        },
+         {
+            name: '总利润',
+            type: 'bar',
+            stack: '2',
+            label: {
+                show: true
+
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [-320, -302, -341, -374, -390, -450, -420]
+        },
+    ]
+};
+myChart.setOption(option);
+
+</script>
+</body>
+</html>

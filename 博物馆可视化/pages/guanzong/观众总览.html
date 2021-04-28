@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="../../dist/js/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 800px;height:600px;"></div>
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    xAxis: {
+        type: 'category',
+        data: ['2016年', '2017年', '2018年', '2019年', '2020年']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [2000, {
+            value: 5000,
+            itemStyle: {
+                color: '#FF8247'
+            }
+        }, 3000, 4000, 3500],
+        type: 'bar'
+    }]
+};
+ // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+</script>
+</body>
+</html>

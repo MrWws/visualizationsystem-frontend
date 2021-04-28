@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 800px;height:600px;"></div>
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option = {
+    title: {
+        text: '观众年龄统计',           //大标题
+        left: 'center'       //组件离容器左侧的距离,'left', 'center',
+    },
+    tooltip: {       //提示框组件
+        trigger: 'item'     //触发类型,'item'数据项图形触发，主要在散点图，饼图等无类目轴的图表中使用。
+
+    },
+    legend: {
+        orient: 'vertical',         //图例排列方向 ：垂直
+        left: 'left',
+    },
+    series: [
+        {
+            name: '年龄统计',
+            type: 'pie',       //饼图
+            radius: '50%',         //控制图形大小
+            data: [
+                {value: 1048, name:'00后'},
+                {value: 735, name: '90后'},
+                {value: 580, name: '80后'},
+                {value: 484, name: '70后'},
+                {value: 300, name: '其他'}
+            ],
+            emphasis: {                   // emphasis：英文意思是 强调;着重;（轮廓、图形等的）鲜明;突出，重读
+                                          // emphasis：设置鼠标放到哪一块扇形上面的时候，扇形样式、阴影
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+</script>
+</body>
+</html>

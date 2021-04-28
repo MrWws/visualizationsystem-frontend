@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<div id="main" style="width: 800px;height:600px;"></div>
+<script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+ title: {
+        text: '近五年检查箱包数量',           //大标题
+        left: 'center'       //组件离容器左侧的距离,'left', 'center',
+    },
+    xAxis: {
+        type: 'category',
+        data: ['2016年', '2017年', '2018年', '2019年', '2020年']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [15000, 23000, 22400, 21800, 13500],
+        type: 'line'
+    }]
+};
+myChart.setOption(option);
+
+</script>
+</body>
+</html>

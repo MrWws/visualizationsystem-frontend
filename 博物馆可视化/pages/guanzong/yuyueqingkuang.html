@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Starter</title>
+  <style>
+  .content-wrapper{
+  width:100%;
+   height:1200px;
+    padding-top:100px;
+  }
+
+
+    .div-levelCenter{
+
+     width:800px;
+    height:200px;
+    margin-top:50px;
+     margin-left:-400px;
+   position:absolute;
+   left:50%;
+
+
+
+
+ }
+
+ .levelCenter{
+
+     width:800px;
+    height:400px;
+  margin-top:570px;
+ margin-left:-400px;
+   position:absolute;
+   left:50%;
+ }
+
+.canal{
+ //border: 1px solid black;
+// margin-left:40%;
+width:220px;
+ font-size:25px;
+  position:absolute;
+  margin-left:-110px;
+   left:50%;
+}
+
+.time{
+ //border: 1px solid black;
+// margin-left:40%;
+width:240px;
+margin-top:500px;
+ font-size:25px;
+  position:absolute;
+  margin-left:-120px;
+   left:50%;
+}
+
+  </style>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect. -->
+  <link rel="stylesheet" href="../../dist/css/skins/skin-blue.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+  <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+  <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>KSH</b></span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>可视化系统</b></span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">博物馆可视化</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+
+
+
+
+         <!-- <li class="dropdown messages-menu">
+              <a href="#" class="hidden-xs">注册</a>
+          </li>
+
+          <li class="dropdown user user-menu">
+             <a href="#" class="hidden-xs">登录</a>
+          </li>-->
+
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">博物馆可视化</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">个人资料</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">退出登录</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- search form (Optional) -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+              </button>
+            </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">HEADER</li>
+        <!-- Optionally, you can add icons to the links -->
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>首页</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+
+        </li>
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>观众</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="zonglan.html">总览</a></li>
+            <li><a href="zhuceqingkuang.html">注册情况</a></li>
+            <li><a href="yuyueqingkuang.html">预约情况</a></li>
+            <li><a href="jiangjiefuwu.html">讲解服务</a></li>
+
+          </ul>
+        </li>
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>安防</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../anfang/zonglan.html">总览</a></li>
+            <li><a href="../anfang/anfangrenyuan.html">安防人员</a></li>
+            <li><a href="../anfang/kongtiao.html">空调</a></li>
+          </ul>
+        </li>
+
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>藏品</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">总览</a></li>
+            <li><a href="#">文物提借</a></li>
+            <li><a href="#">文物征集</a></li>
+            <li><a href="#">文物修复</a></li>
+            <li><a href="#">储藏设备</a></li>
+          </ul>
+        </li>
+
+
+
+
+
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>展览</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#">总览</a></li>
+            <li><a href="#">基本陈列</a></li>
+            <li><a href="#">主题展览</a></li>
+            <li><a href="#">专题展览</a></li>
+            <li><a href="#">临时展览</a></li>
+            <li><a href="#">国博巡展</a></li>
+          </ul>
+        </li>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="canal">观众预约渠道统计</div>
+<div class="div-levelCenter">
+   <!-- <div style="margin: 0 auto; width: 800px;">-->
+  <div class="col-md-12">
+        <div id="main" style="width: 800px;height:400px;"></div>
+  </div>
+</div>
+
+    <div class="time">观众预约时间段统计</div>
+    <div class="levelCenter">
+<div class="col-md-12">
+        <div id="main1" style="width: 800px;height:400px;"></div>
+</div>
+</div>
+
+
+
+    <script type="text/javascript">
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom);
+var option;
+
+option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // Use axis to trigger tooltip
+            type: 'shadow'        // 'shadow' as default; can also be 'line' or 'shadow'
+        }
+    },
+    legend: {
+        data: ['微信公众号', '官网', '其他']
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: {
+        type: 'value'
+    },
+    yAxis: {
+        type: 'category',
+        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月','8月', '9月', '10月', '11月','12月']
+    },
+    series: [
+        {
+            name: '微信公众号',
+            type: 'bar',
+            stack: 'total',
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [320, 302, 301, 334, 390, 330, 320,330,400,500,600,200]
+        },
+        {
+            name: '官网',
+            type: 'bar',
+            stack: 'total',
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [120, 132, 101, 134, 90, 230, 210,320, 302, 301, 334, 390]
+        },
+        {
+            name: '其他',
+            type: 'bar',
+            stack: 'total',
+            label: {
+                show: true
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [220, 182, 191, 234, 290, 330, 310,120, 132, 101, 134, 230]
+        },
+
+    ]
+};
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+ window.onresize = function (ec) { // 监听窗口大小变化
+        // console.log(ec)
+        myChart.resize()       // 自适应大小变化
+    }
+
+
+
+
+var app = {};
+var chartDom = document.getElementById('main1');
+var myChart = echarts.init(chartDom);
+var option;
+
+var cellSize = [80, 80];
+var pieRadius = 30;
+
+function getVirtulData() {
+    var date = +echarts.number.parseDate('2017-02-01');
+    var end = +echarts.number.parseDate('2017-03-01');
+    var dayTime = 3600 * 24 * 1000;
+    var data = [];
+    for (var time = date; time < end; time += dayTime) {
+        data.push([
+            echarts.format.formatTime('yyyy-MM-dd', time),
+            Math.floor(Math.random() * 10000)
+        ]);
+    }
+    return data;
+}
+
+function getPieSeries(scatterData, chart) {
+    return scatterData.map(function (item, index) {
+        var center = chart.convertToPixel('calendar', item);
+        return {
+            id: index + 'pie',
+            type: 'pie',
+            center: center,
+            label: {
+                normal: {
+                    formatter: '{c}',
+                    position: 'inside'
+                }
+            },
+            radius: pieRadius,
+            data: [
+                {name: '8:00-10:00', value: Math.round(Math.random() * 24)},
+                {name: '10:00-14:00', value: Math.round(Math.random() * 24)},
+                {name: '14:00-18:00', value: Math.round(Math.random() * 24)}
+            ]
+        };
+    });
+}
+
+function getPieSeriesUpdate(scatterData, chart) {
+    return scatterData.map(function (item, index) {
+        var center = chart.convertToPixel('calendar', item);
+        return {
+            id: index + 'pie',
+            center: center
+        };
+    });
+}
+
+var scatterData = getVirtulData();
+
+option = {
+    tooltip : {},
+    legend: {
+        data: ['8:00-10:00', '10:00-14:00', '14:00-18:00'],
+        bottom:20,
+        left:400
+
+    },
+    calendar: {
+        top: 'middle',
+        left: 'center',
+        orient: 'vertical',
+        cellSize: cellSize,
+        yearLabel: {
+            show: false,
+            fontSize: 20
+        },
+        dayLabel: {
+            margin: 20,
+            firstDay: 1,
+            nameMap: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+        },
+        monthLabel: {
+            show: false
+        },
+        range: ['2017-02']
+    },
+    series: [{
+        id: 'label',
+        type: 'scatter',
+        coordinateSystem: 'calendar',
+        symbolSize: 1,
+        label: {
+            show: true,
+            formatter: function (params) {
+                return echarts.format.formatTime('dd', params.value[0]);
+            },
+            offset: [-cellSize[0] / 2 + 10, -cellSize[1] / 2 + 10],
+            fontSize: 14
+        },
+        data: scatterData
+    }]
+};
+
+var pieInitialized;
+setTimeout(function () {
+    pieInitialized = true;
+    myChart.setOption({
+        series: getPieSeries(scatterData, myChart)
+    });
+}, 10);
+
+app.onresize = function () {
+    if (pieInitialized) {
+        myChart.setOption({
+            series: getPieSeriesUpdate(scatterData, myChart)
+        });
+    }
+};
+// 使用刚指定的配置项和数据显示图表。
+myChart.setOption(option);
+
+ window.onresize = function (ec) { // 监听窗口大小变化
+        // console.log(ec)
+        myChart.resize()       // 自适应大小变化
+    }
+
+</script>
+
+
+  </div>
+
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- ChartJS -->
+  <script src="../../bower_components/chart.js/Chart.js"></script>
+  <!-- FastClick -->
+  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+
+
+
+
+
+<!-- Optionally, you can add Slimscroll and FastClick plugins.
+     Both of these plugins are recommended to enhance the
+     user experience. -->
+</body>
+</html>
