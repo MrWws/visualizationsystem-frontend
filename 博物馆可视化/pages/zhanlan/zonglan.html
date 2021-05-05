@@ -228,19 +228,19 @@ desired effect
 
 
         <li class="treeview">
-            <a href="#"><i class="fa fa-link"></i> <span>藏品</span>
-              <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="../cangpin/zonglan.html">总览</a></li>
-              <li><a href="../cangpin/wenwutijie.html">文物提借</a></li>
-              <li><a href="../cangpin/wenwuzhengji.html">文物征集</a></li>
-              <li><a href="../cangpin/wenwuxiufu.html">文物修复</a></li>
-              <li><a href="../cangpin/chucangshebei.html">储藏设备</a></li>
-            </ul>
-          </li>
+          <a href="#"><i class="fa fa-link"></i> <span>藏品</span>
+            <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../cangpin/zonglan.html">总览</a></li>
+            <li><a href="../cangpin/wenwutijie.html">文物提借</a></li>
+            <li><a href="../cangpin/wenwuzhengji.html">文物征集</a></li>
+            <li><a href="../cangpin/wenwuxiufu.html">文物修复</a></li>
+            <li><a href="../cangpin/chucangshebei.html">储藏设备</a></li>
+          </ul>
+        </li>
 
 
 
@@ -253,7 +253,7 @@ desired effect
               </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#">总览</a></li>
+            <li><a href="../zhanlan/zonglan.html">总览</a></li>
             <li><a href="#">基本陈列</a></li>
             <li><a href="#">主题展览</a></li>
             <li><a href="#">专题展览</a></li>
@@ -273,9 +273,7 @@ desired effect
     <!-- Content Header (Page header) -->
 
 <div class="div-levelCenter">
-   <!-- <div style="margin: 0 auto; width: 800px;">-->
         <div id="main" style="width: 800px;height:600px;"></div>
-        <div id="main1" style="width: 800px;height:600px;"></div>
 </div>
 
 
@@ -285,22 +283,129 @@ desired effect
     <script type="text/javascript">
 var chartDom = document.getElementById('main');
 var myChart = echarts.init(chartDom);
+var seriesLabel = {
+    show: true
+}
 var option;
 
 option = {
+    title: {
+        text: 'Weather Statistics'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
+    },
+    legend: {
+        data: ['全年展览数', '当前在展数']
+    },
+    grid: {
+        left: 100
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            saveAsImage: {}
+        }
+    },
     xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        type: 'value',
+        name: 'Days',
+        axisLabel: {
+            formatter: '{value}'
+        }
     },
     yAxis: {
-        type: 'value'
+        type: 'category',
+        inverse: true,
+        data: ['基本陈列', '主题展览', '专题展览','临时展览','国博巡展'],
+        axisLabel: {
+            margin: 20,
+            rich: {
+                value: {
+                    lineHeight: 30,
+                    align: 'center'
+                },
+                基本陈列: {
+                    height: 40,
+                    align: 'center',
+                },
+               主题展: {
+                    height: 40,
+                    align: 'center',
+                },
+                专题展览: {
+                    height: 40,
+                    align: 'center',
+                },
+                临时展览: {
+                    height: 40,
+                    align: 'center',
+                },
+                国博巡展: {
+                    height: 40,
+                    align: 'center',
+                }
+            }
+        }
     },
-    series: [{
-        data: [820, 932, 901, 934, 1290, 1330, 1320],
-        type: 'line',
-        areaStyle: {}
-    }]
+    series: [
+        {
+            name: '全年展览数',
+            type: 'bar',
+            data: [165, 170, 30,50,50],
+            label: seriesLabel,
+            markPoint: {
+                symbolSize: 1,
+                symbolOffset: [0, '50%'],
+                label: {
+                    formatter: '{a|{a}\n}{b|{b} }{c|{c}}',
+                    backgroundColor: 'rgb(242,242,242)',
+                    borderColor: '#aaa',
+                    borderWidth: 1,
+                    borderRadius: 4,
+                    padding: [4, 10],
+                    lineHeight: 26,
+                    // shadowBlur: 5,
+                    // shadowColor: '#000',
+                    // shadowOffsetX: 0,
+                    // shadowOffsetY: 1,
+                    position: 'right',
+                    distance: 20,
+                    rich: {
+                        a: {
+                            align: 'center',
+                            color: '#fff',
+                            fontSize: 18,
+                            textShadowBlur: 2,
+                            textShadowColor: '#000',
+                            textShadowOffsetX: 0,
+                            textShadowOffsetY: 1,
+                            textBorderColor: '#333',
+                            textBorderWidth: 2
+                        },
+                        b: {
+                            color: '#333'
+                        },
+                        c: {
+                            color: '#ff8811',
+                            textBorderColor: '#000',
+                            textBorderWidth: 1,
+                            fontSize: 22
+                        }
+                    }
+                },
+            }
+        },
+        {
+            name: '当前在展数',
+            type: 'bar',
+            label: seriesLabel,
+            data: [150, 105, 110,100,100]
+        }
+    ]
 };
 
 myChart.setOption(option);
@@ -310,74 +415,11 @@ myChart.setOption(option);
         myChart.resize()       // 自适应大小变化
     }
 
-
-
-
-
-
-
-
 </script>
 
-<script type="text/javascript">
-    var chartDom1 = document.getElementById('main1');
-    var myChart1 = echarts.init(chartDom1);
-    var option;
-    
-    option = {
-    title: {
-        text: '某站点用户访问来源',
-        subtext: '纯属虚构',
-        left: 'center'
-    },
-    tooltip: {
-        trigger: 'item'
-    },
-    legend: {
-        orient: 'vertical',
-        left: 'left',
-    },
-    series: [
-        {
-            name: '访问来源',
-            type: 'pie',
-            radius: '50%',
-            data: [
-                {value: 1048, name: '搜索引擎'},
-                {value: 735, name: '直接访问'},
-                {value: 580, name: '邮件营销'},
-                {value: 484, name: '联盟广告'},
-                {value: 300, name: '视频广告'}
-            ],
-            emphasis: {
-                itemStyle: {
-                    shadowBlur: 10,
-                    shadowOffsetX: 0,
-                    shadowColor: 'rgba(0, 0, 0, 0.5)'
-                }
-            }
-        }
-    ]
-};
-    
-    myChart1.setOption(option);
-    
-     window.onresize = function (ec) { // 监听窗口大小变化
-            // console.log(ec)
-            myChart.resize()       // 自适应大小变化
-        }
-    
-    
-    
-    
-    
-    
-    
-    
-    </script>
 
+</div>
 
-  </div>
   <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
   <!-- Bootstrap 3.3.7 -->
   <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
