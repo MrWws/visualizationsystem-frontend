@@ -286,15 +286,18 @@ var myChart = echarts.init(chartDom);
 var option;
 
 option = {
+    title: {
+        text: '修复藏品类型统计'
+    },
     xAxis: {
         type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        data: ['金属器物', '油画', '书画文物', '器物']
     },
     yAxis: {
         type: 'value'
     },
     series: [{
-        data: [120, 200, 150, 80, 70, 110, 130],
+        data: [120, 200, 150, 80],
         type: 'bar'
     }]
 };

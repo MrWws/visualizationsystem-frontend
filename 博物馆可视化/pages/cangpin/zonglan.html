@@ -288,6 +288,9 @@ var myChart = echarts.init(chartDom);
 var option;
 
 option = {
+    title: {
+        text: '近五年藏品总数量'
+    },
     xAxis: {
         type: 'category',
         boundaryGap: false,
@@ -342,10 +345,10 @@ myChart.setOption(option);
             type: 'pie',
             radius: '50%',
             data: [
-                {value: 1048, name: '搜索引擎'},
-                {value: 735, name: '直接访问'},
-                {value: 580, name: '邮件营销'},
-                {value: 484, name: '联盟广告'},
+                {value: 1048, name: '全年新征集文物数量'},
+                {value: 735, name: '全年新登编文物数量'},
+                {value: 580, name: '全年新提借文物数量'},
+                {value: 484, name: '全年新注销文物数量'},
             ],
             emphasis: {
                 itemStyle: {
